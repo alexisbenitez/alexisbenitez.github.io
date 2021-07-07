@@ -15,7 +15,7 @@ Getting *laptops* list from flipkart.com <br><br>
 - *Pandas*: I guess it doesn't need to be introduced (ಠ‿ʘ)
 - *BeatifulSoup*: for parsing the html.
 
-```python
+``` python
 import re
 import requests
 import pandas as pd
