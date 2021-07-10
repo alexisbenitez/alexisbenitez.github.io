@@ -10,18 +10,14 @@ background: '/img/posts/web-scraping/python-scraping.png'
 Getting *laptops* list from flipkart.com <br><br>
 
 **Importing libraries:**
-- *Re*: for regular expresions. I used it to get the pages num.
-- *Requests*: to keep alive the http conn while getting the data from each page.
-- *Pandas*: I guess it doesn't need to be introduced (ಠ‿ʘ)
-- *BeatifulSoup*: for parsing the html.
 
-``` python
+~~~ python
 import re
 import requests
 import pandas as pd
 from requests import get
 from bs4 import BeautifulSoup
-```
+~~~
 <br>
 
 ***Getting the num of pages the search returns:***<br>
