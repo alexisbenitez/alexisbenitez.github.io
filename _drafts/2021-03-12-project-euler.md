@@ -10,7 +10,6 @@ background: '/img/posts/web-scraping/python-scraping.png'
 Getting *laptops* list from flipkart.com <br><br>
 
 **Importing libraries:**
-
 {% highlight python %}
 import re
 import requests

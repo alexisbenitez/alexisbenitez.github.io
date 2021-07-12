@@ -28,7 +28,7 @@ Then I parse it on *soup* to use findAll and get the element where the num of pa
 link = 'https://www.flipkart.com/search?q=laptop&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off'
 page = requests.get(link)
 soup = BeautifulSoup(page.text)
-element = soup.findAll('div', attrs = {'class': '_2zg3yZ'})[0]
+element = soup.findAll('div', attrs = {'class': '_2MImiq'})[0]
 numOfPages = re.findall('(\d+)(?!.*\d+)', element.find('span').text)
 numOfPages = int(numOfPages[0])
 ```
@@ -45,10 +45,11 @@ for pageNum in range(2, numOfPages + 1):
 ```
 <br>
 
-**Initialize the products' list:**
+**Initialize cleared products' list:**
 
 ```python
 productsList = []
+productsList.clear()
 ```
 
 <br>
@@ -58,14 +59,11 @@ This function takes the obj *soupPage* which is going to be each parsed page con
 
 ```python
 def getPageData(soupPage):
-    productsList.clear()
-    for element in soupPage.findAll('div', attrs = {'class': '_1-2Iqu row'}):
-        name = element.find('div', attrs = {'class': '_3wU53n'})
-        price = element.find('div', attrs = {'class': '_1vC4OE _2rQ-NK'})
-        rating = element.find('div', attrs = {'class': 'hGSR34'})
+    for element in soupPage.findAll('div', attrs = {'class': '_3pLy-c row'}):
+        name = element.find('div', attrs = {'class': '_4rR01T'})
+        price = element.find('div', attrs = {'class': '_30jeq3 _1_WHN1'})
         product = {'Product': name.text,
-	           'Price': price.text[1:].replace(',', '') if price is not None else 'N/A',
-	           'Rating': rating.text if rating is not None else 'N/A'}
+           'Price': price.text[1:].replace(',', '') if price is not None else 'N/A'}
         productsList.append(product)
 ```
 <br>
@@ -79,6 +77,7 @@ for link in pageLinks:
     page = requests.get(link)
     soupPage = BeautifulSoup(page.text, 'html.parser')  
     getPageData(soupPage)
+print("Done!")
 ```
 <br>
 
@@ -96,3 +95,7 @@ df = pd.DataFrame(productsList)
 pd.set_option("max_rows", None)
 print(df)
 ```
+
+**The final result:**
+
+<img src="/img/posts/web-scraping/flipkart_laptops_df.png">
