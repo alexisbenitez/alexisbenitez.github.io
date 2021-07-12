@@ -1,20 +1,14 @@
-I"�(<h1 id="data-scraping">Data Scraping</h1>
+I"�'<h1 id="data-scraping">Data Scraping</h1>
 <p>Getting <em>laptops</em> list from flipkart.com <br /><br /></p>
 
 <p><strong>Importing libraries:</strong></p>
-<ul>
-  <li><em>Re</em>: for regular expresions. I used it to get the pages num.</li>
-  <li><em>Requests</em>: to keep alive the http conn while getting the data from each page.</li>
-  <li><em>Pandas</em>: I guess it doesn’t need to be introduced (ಠ‿ʘ)</li>
-  <li><em>BeatifulSoup</em>: for parsing the html.</li>
-</ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
 <span class="kn">from</span> <span class="nn">requests</span> <span class="kn">import</span> <span class="n">get</span>
-<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-</code></pre></div></div>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span></code></pre></figure>
+
 <p><br /></p>
 
 <p><strong><em>Getting the num of pages the search returns:</em></strong><br />
