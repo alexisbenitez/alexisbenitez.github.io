@@ -11,14 +11,13 @@ Getting *laptops* list from flipkart.com <br><br>
 
 **Importing libraries:**
 
-~~~ python
+```python
 import re
 import requests
 import pandas as pd
 from requests import get
 from bs4 import BeautifulSoup
-~~~
-<br>
+```
 
 ***Getting the num of pages the search returns:***<br>
 Here I get a site response via *requests.get()* and store it within the object *page*.<br>
@@ -32,7 +31,6 @@ element = soup.findAll('div', attrs = {'class': '_2MImiq'})[0]
 numOfPages = re.findall('(\d+)(?!.*\d+)', element.find('span').text)
 numOfPages = int(numOfPages[0])
 ```
-<br>
 
 **Generate list of links to scrap:**<br>
 I create an array to store all the links to go through. First element is different so it's added before the loop.
@@ -43,7 +41,6 @@ pageLinks.append(link)
 for pageNum in range(2, numOfPages + 1):
     pageLinks.append(link + '&page=' + str(pageNum))
 ```
-<br>
 
 **Initialize cleared products' list:**
 
@@ -52,7 +49,6 @@ productsList = []
 productsList.clear()
 ```
 
-<br>
 
 **Function to get data from one page:**<br>
 This function takes the obj *soupPage* which is going to be each parsed page containing the laptops.
@@ -66,7 +62,6 @@ def getPageData(soupPage):
            'Price': price.text[1:].replace(',', '') if price is not None else 'N/A'}
         productsList.append(product)
 ```
-<br>
 
 **Extract data from pages:**<br>
 For loop that calls each page and parses it before passing it to *getPageData* function, described above.
@@ -79,7 +74,6 @@ for link in pageLinks:
     getPageData(soupPage)
 print("Done!")
 ```
-<br>
 
 **Create the Data Frame:**
 
@@ -87,13 +81,12 @@ print("Done!")
 df = pd.DataFrame(productsList)
 ```
 
-<br>
 
 **Print the Data Set:**
 
 ```python
 pd.set_option("max_rows", None)
-print(df)
+df.style
 ```
 
 **The final result:**
