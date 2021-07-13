@@ -1,15 +1,18 @@
 ---
 layout: post
-title: "Data scraping on Python"
-subtitle: "A scraper to get all laptops posts on flipkart.com"
+title: "Data scraping"
+subtitle: "A scraper to get all laptops from flipkart.com"
 date: 2020-06-20 23:45:13 -1300
 background: '/img/posts/web-scraping/python-scraping.png'
 ---
 
 # Data Scraping
-Getting *laptops* list from flipkart.com <br><br>
+***Getting laptops list from flipkart.com***<br><br>
 
-**Importing libraries:**
+So the main goal of this post is to show how I've got a data frame with all the laptops posted on flipkart.com online store. For this I used Pandas, Beatiful Soup and Regex modules, created a function to get all the data from the links and looped through them, appending the new data to the product object to end up converting it into the final data frame.
+
+
+***Importing libraries:***
 
 ```python
 import re
@@ -32,7 +35,7 @@ numOfPages = re.findall('(\d+)(?!.*\d+)', element.find('span').text)
 numOfPages = int(numOfPages[0])
 ```
 
-**Generate list of links to scrap:**<br>
+***Generate list of links to scrap:***<br>
 I create an array to store all the links to go through. First element is different so it's added before the loop.
 
 ```python
@@ -42,7 +45,7 @@ for pageNum in range(2, numOfPages + 1):
     pageLinks.append(link + '&page=' + str(pageNum))
 ```
 
-**Initialize cleared products' list:**
+***Initialize cleared products' list:***
 
 ```python
 productsList = []
@@ -50,7 +53,7 @@ productsList.clear()
 ```
 
 
-**Function to get data from one page:**<br>
+***Function to get data from one page:***<br>
 This function takes the obj *soupPage* which is going to be each parsed page containing the laptops.
 
 ```python
@@ -63,7 +66,7 @@ def getPageData(soupPage):
         productsList.append(product)
 ```
 
-**Extract data from pages:**<br>
+***Extract data from pages:***<br>
 For loop that calls each page and parses it before passing it to *getPageData* function, described above.
 
 ```python
@@ -75,20 +78,20 @@ for link in pageLinks:
 print("Done!")
 ```
 
-**Create the Data Frame:**
+***Create the Data Frame:***
 
 ```python
 df = pd.DataFrame(productsList)
 ```
 
 
-**Print the Data Set:**
+***Print the Data Set:***
 
 ```python
 pd.set_option("max_rows", None)
 df.style
 ```
 
-**The final result:**
+***The final result:***
 
 <img src="/img/posts/web-scraping/flipkart_laptops_df.png">
