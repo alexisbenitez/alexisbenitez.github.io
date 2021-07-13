@@ -1,0 +1,73 @@
+I"i<h1 id="codility">Codility</h1>
+
+<p>Codility is a popular automated test site of programming skills. By taking the test you will demonstrate your programming ability on some small coding assignments. Presented with a few tasks, you will require to write or correct some code.
+Here I want to show some problems you can find on Codility and their solutions, in Python.</p>
+
+<p><br /><br /></p>
+
+<h1 id="lessons">Lessons:</h1>
+<p><br /></p>
+
+<h2>Binary Gap</h2>
+
+<p>A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.</p>
+
+<p>For example, number 9 has binary representation 1001 and contains a binary gap of length 2. The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3. The number 20 has binary representation 10100 and contains one binary gap of length 1. The number 15 has binary representation 1111 and has no binary gaps. The number 32 has binary representation 100000 and has no binary gaps.</p>
+
+<p>Write a function:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn’t contain a binary gap.</p>
+
+<p>For example, given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5. Given N = 32 the function should return 0, because N has binary representation ‘100000’ and thus no binary gaps.</p>
+
+<p>Write an efficient algorithm for the following assumptions:</p>
+
+<p class="cen"> N is an integer within the range [1..2,147,483,647]. </p>
+
+<h2>Soution:</h2>
+
+<p>So the next function may look short but it applies some important concepts about regular expressions: lookahead and lookbehind, collectively called “lookaround”.
+Lookarounds actually match characters, but then give up the match, returning only the result: match or no match. in other words, they don’t “use” the matched character, allowing it to use it again in the next check.
+This is specially usefull for this lesson since allow us to match zeroes in between ones without “using” those ones. E.g: for 10001001 we have two matches, 000 and 00,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">zeros</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s">'(?&lt;=1)0+(?=1)'</span><span class="p">,</span> <span class="nb">bin</span><span class="p">(</span><span class="n">N</span><span class="p">)[</span><span class="mi">2</span><span class="p">:])</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">zeros</span><span class="p">))</span> <span class="k">if</span> <span class="n">zeros</span> <span class="k">else</span> <span class="mi">0</span>
+</code></pre></div></div>
+
+<p><br /></p>
+<h2>Problem X:</h2>
+
+<p class="cen"> This is centered </p>
+
+<h2>Soution:</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<p><br /></p>
+<h2>Problem X:</h2>
+
+<p class="cen"> This is centered </p>
+
+<h2>Soution:</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<p><br /></p>
+<h2>Problem X:</h2>
+
+<p class="cen"> This is centered </p>
+
+<h2>Soution:</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+:ET

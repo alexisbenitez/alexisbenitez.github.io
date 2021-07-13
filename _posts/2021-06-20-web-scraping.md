@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Data scraping"
-subtitle: "A scraper to get all laptops from flipkart.com"
+subtitle: "A scraper to get all laptops on flipkart.com"
 date: 2020-06-20 23:45:13 -1300
 background: '/img/posts/web-scraping/python-scraping.png'
 ---
