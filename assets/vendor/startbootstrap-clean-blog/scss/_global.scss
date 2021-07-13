@@ -24,6 +24,16 @@ p.code {
     font-style: italic;
 }
 
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 50%;
+  }
+
+th, td {
+    padding: 10px;
+    }
+
 h1,
 h2,
 h3,

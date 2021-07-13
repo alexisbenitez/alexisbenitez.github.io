@@ -95,3 +95,5 @@ df.style
 ***The final result:***
 
 <img src="/img/posts/web-scraping/flipkart_laptops_df.png">
+
+<br>
