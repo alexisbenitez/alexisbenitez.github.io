@@ -52,6 +52,11 @@ a {
     }
 }
 
+a.blue {
+    color: $primary;
+    text-decoration: underline;
+}
+
 blockquote {
     font-style: italic;
     color: $gray-600;
