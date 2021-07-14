@@ -16,7 +16,7 @@ Tableau Software is an American interactive data visualization software company 
 
 # CO2 emissions 2010-2011 #
 
-This is a step by step guide to show how to make visualizations out of data from multiple sourcess by **joining datasets**. This will enable you to visualize comparisons and combinations of data, which will allow sharing more complex projects.
+This is a step by step guide I made to show how to make visualizations out of data from multiple sourcess by **joining datasets**. This will enable you to visualize comparisons and combinations of data, which will allow sharing more complex projects.
 
 This viz will show the CO2 emissions per capita for each country from 2010-2011, comparing CO2 emissions between countries from year to year, but also provides information about each county’s population, GDP, and energy use. 
 
