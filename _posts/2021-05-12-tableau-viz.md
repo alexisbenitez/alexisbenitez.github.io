@@ -2,7 +2,7 @@
 layout: post
 title: "Tableau, energy visuals"
 subtitle: "A viz for CO2 global emmisions 2010-2011"
-date: 2020-05-13 23:45:13 -1300
+date: 2021-05-12 23:45:13 -1300
 background: '/img/posts/tableau/bg-tableau.png'
 ---
 

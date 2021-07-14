@@ -2,7 +2,7 @@
 layout: post
 title: "Project Euler"
 subtitle: "A list of problems and their solutions in Python"
-date: 2020-05-13 23:45:13 -1300
+date: 2021-06-29 23:45:13 -1300
 background: '/img/posts/project-euler/bg-project-euler.jpeg'
 ---
 
