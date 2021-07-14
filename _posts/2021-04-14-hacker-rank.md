@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HackerRank"
+title: "HackerRank SQL"
 subtitle: "SQL challenges, sorted"
 date: 2021-04-14 11:19:13 -1300
 background: '/img/posts/hacker-rank/bg-hacker-rank.png'
