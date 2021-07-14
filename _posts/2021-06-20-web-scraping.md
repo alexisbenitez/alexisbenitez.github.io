@@ -7,9 +7,17 @@ background: '/img/posts/web-scraping/python-scraping.png'
 ---
 
 # Data Scraping
+
+In short, data scraping is a technique where a computer program extracts data from human-readable output coming from another program.
+
+<br>
+<hr>
+<br>
+
 ***Getting laptops list from flipkart.com***<br><br>
 
-So the main goal of this post is to show how I've got a data frame with all the laptops posted on flipkart.com online store. For this I used Pandas, Beatiful Soup and Regex modules, created a function to get all the data from the links and looped through them, appending the new data to the product object to end up converting it into the final data frame.
+The goal of this post is to show how I create a Data Frame with all the laptops posted on flipkart.com online store. For this I used Pandas, Beatiful Soup and Regex modules;
+I have also created a function *getPageData()* to get all the data from the links and looped through them, appending the new data to the product object to end up converting it into the final data frame.
 
 
 ***Importing libraries:***

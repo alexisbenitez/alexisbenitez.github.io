@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SQL - Hacker Rank"
+title: "SQL - HackerRank"
 subtitle: "HakerRank, SQL challenges"
 date: 2021-04-14 11:19:13 -1300
 background: '/img/posts/hacker-rank/bg-hacker-rank.png'
@@ -10,7 +10,9 @@ background: '/img/posts/hacker-rank/bg-hacker-rank.png'
 
 HackerRank is a technology hiring platform that is the standard for assessing developer skills for over 2,000+ companies around the world. By enabling tech recruiters and hiring managers to objectively evaluate talent at every stage of the recruiting process, HackerRank helps companies hire skilled developers and innovate faster.
 
-<br><br>
+<br>
+<hr>
+<br>
 
 # Challenges #
 
@@ -62,10 +64,8 @@ The empty cell data for columns with less than the maximum number of names per o
 
 <h2>Solution:</h2>
 
-For this challenge I divide the problem into two parts. In order to transpose the table we first need to create another table with a subquery, checking professions row by row. This will return a table with one value (name) per row, other colums will be NULL, plus the count of that profession at the very end, named ROW_NUM.
-<br><br>
-Once executed this subquery and stored as TEMP, we use GROUP BY ROW_NUM. This, combined with the aggregation functions we used at the beggining, will return the expected table. I used MIN but could have been any aggregation, since only action needed here is to take the names out of the NULLs.
-<br><br>
+For this challenge I divide the problem into two parts. In order to transpose the table we first need to create another table with a subquery, checking professions row by row. This will return a table with one value (name) per row; other colums will be NULL, plus the count of that profession at the very end, named ROW_NUM.
+
 ```sql
 SET @d = 0, @p = 0, @s = 0, @a = 0;
 SELECT MIN(DOCTOR_NAMES), MIN(PROFESSOR_NAMES), MIN(SINGER_NAMES), MIN(ACTOR_NAMES)
@@ -87,8 +87,9 @@ FROM
     ) AS TEMP
 GROUP BY ROW_NUM;
 ```
-
 <br>
+Once executed this subquery and stored as TEMP, we use GROUP BY ROW_NUM. This, combined with the aggregation functions we used at the beggining, will return the expected table. I used MIN but could have been any aggregation, since only action needed here is to take the names out of the NULLs.
+<br><br>
 <!-- ---------------------------- -->
 <hr>
 
@@ -133,7 +134,7 @@ SELECT TRUNCATE(SQRT(POW(MAX(lat_n) - MIN(lat_n), 2) + POW(MAX(long_w) - MIN(lon
 FROM Station
 ```
 
-For this approach, calculated the distance between the two points on a real line as the absolute value of the numerical difference of their coordinates P₁ and P₂. 
+For this approach, calculated the distance between the two points on a real line as the absolute value of the numerical difference of their coordinates P₁ and P₂. This is the square root of the sum of their squared differences.
 
 <br><br>
 

@@ -12,7 +12,9 @@ Project Euler was started by Colin Hughes (a.k.a. euler) in October 2001 as a su
 
 *"Project Euler exists to encourage, challenge, and develop the skills and enjoyment of anyone with an interest in the fascinating world of mathematics."*
 
-<br><br>
+<br>
+<hr>
+<br>
 
 # Problems: #
 <br>

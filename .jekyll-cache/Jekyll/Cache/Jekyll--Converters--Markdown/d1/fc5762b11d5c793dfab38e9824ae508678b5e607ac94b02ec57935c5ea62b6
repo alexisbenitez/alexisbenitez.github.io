@@ -1,0 +1,185 @@
+I"�)<h1 id="tableau-software">Tableau Software</h1>
+
+<p>Tableau Software is an American interactive data visualization software company focused on business intelligence. It was founded in 2003 in Mountain View, California, and is currently headquartered in Seattle, Washington.</p>
+
+<p><br /></p>
+<hr />
+
+<p><br /></p>
+
+<h1 id="co2-emissions-2010-2011">CO2 emissions 2010-2011</h1>
+
+<p>In this excercise, I will show how to make visualizations out of data from multiple sources. This will enable you to visualize comparisons and combinations of data, which will allow sharing more complex projects.</p>
+
+<p>This viz will show the CO2 emissions per capita for each country from 2010-2011, comparing CO2 emissions between countries from year to year, but also provides information about each county’s population, GDP, and energy use.</p>
+
+<p>First click on the links to download the datasets:</p>
+
+<ul>
+  <li><a href="https://d3c33hcgiwev3.cloudfront.net/L2hkvFNhSXeoZLxTYQl3nA_5566727b2d444172b56efc2ff36565ac_CO2.xlsx?Expires=1626393600&amp;Signature=AaxNLfL-gHLgqE0grftBjH549t9hwv7XjcMoe17pXtmrW5zzDLp-CCIMMLNdXjAHOwvQfi0Md7UQbNX-6vPDyCEXYVnjGELP6Qm5RVf~ckuY2lhitj93yPrct~sv2wpDGivIW849ghYdcC5rknlM3BkiejV2D1hd6kGmaAgD7ZM_&amp;Key-Pair-Id=APKAJLTNE6QMUY6HBC5A">CO2.xlsx</a></li>
+  <li><a href="https://d3c33hcgiwev3.cloudfront.net/HvJxDD-oQbSycQw_qMG0mQ_94f08b5298d94325abdb9d843618b58e_Energy-data.xlsx?Expires=1626393600&amp;Signature=Lb5B1zMZA3VpcEwzQSEv-UhKcl4-gKR918arSFQTn8e9ZlMqHh34szebva6mo9C7u6BQ138Etz2WhcpSsO8R2QG72~ZDAx~ilcD~7zz9XbkHI8henY~rYjkYHWrSDa4AEq5n5yLghldl191Kj2d~8p5CXQ~1crvblyadpAAV1c8_&amp;Key-Pair-Id=APKAJLTNE6QMUY6HBC5A">Energy data.xlsx</a></li>
+  <li><a href="https://d3c33hcgiwev3.cloudfront.net/AFPt1QKBRbKT7dUCgYWy9A_e5063a3d2680444681fa33afc140fca2_totalpopulation.xlsx?Expires=1626393600&amp;Signature=Db6PGZtuOl~6jO5SXGPdeMv3vf7VX5M2YDAiX0oYK10n3x~mkEj~P5wpRBDZxv-2kqzsAlxJ4V0fTt5gTO-s605Swcyhc4ZZYeCYxoupoobFL8Sq8JjPrT2IKjIyZQWExLz4a8unykBpob3yUs42U0j3v8icuiP7gGIIgnIcg6I_&amp;Key-Pair-Id=APKAJLTNE6QMUY6HBC5A">totalpopulation.xlsx</a></li>
+  <li><a href="https://d3c33hcgiwev3.cloudfront.net/6lyds9u2TRqcnbPbth0aOQ_6869b3e9e1d04ba2bf9cd3d8312108af_gdptotal.xlsx?Expires=1626393600&amp;Signature=PsqrtO-u2NglGR5COn4OwIw6Rhw7aFAv7z9d9CV5WapCYWpTTEfsfbNkeDEmUgmRlm0-mrrP0kqIzW6EYCUXSGlduDYtKtASCr5melvY3BfE9pH4SJlUvKPEIxWUPF2hhYIarUp4KDuaN~iSoE6XsIO32qQABanEqop8-ocYYo4_&amp;Key-Pair-Id=APKAJLTNE6QMUY6HBC5A">gdptotal.xlsx</a></li>
+</ul>
+
+<p>On <em>Connect to Data</em> window, go to the Files tab and open the CO2 dataset downloaded. From the Data Source tab on the bottom of the interface, click on Connections header at the top of the left-side column.</p>
+
+<p><img src="/img/posts/tableau/img01.png" class="reduce" /></p>
+
+<p>Click the + icon to add another data source. Start with the ENERGY dataset.</p>
+
+<p>Repeat step 5 for the other datasets, gdptotal and totalpopulation.</p>
+
+<p><strong>Make connections with JOINs</strong></p>
+
+<p>Create visualizations using multiple datasets using JOIN on Tableau.</p>
+
+<p>Now, we’ll set up the connections between the different datasets by creating JOINs between them.</p>
+
+<p>Click on CO2 under Connections.</p>
+
+<p>Under Sheets, you will notice all the different sheets in the CO2 dataset. Find CO2 Data Cleaned and double-click on it to load it.</p>
+
+<p>Hover your cursor over the right side of the CO2 Data Cleaned box and click on the arrow.</p>
+
+<p>Select Open to open the CO2 Data Cleaned dataset. Make sure you complete this step. This allows you to change the physical table, which will allow you to create JOINs. Otherwise, you will only be able to edit Relationships. Usually, you could use either option to accomplish the same goal. But for the purposes of this activity, we specifically want to use JOINs.</p>
+
+<p>Your screen should appear similar to the screenshot below:</p>
+
+<p><img src="/img/posts/tableau/img03.png" /></p>
+
+<p>Click on the energy dataset under Connections.</p>
+
+<p>Drag the energy sheet across from the CO2 Data Cleaned box under Multiple Connections. A pop-up window for a Join will appear.</p>
+
+<p>The popup window may automatically populate with Year from CO2 Data Cleaned and Year1 from Energy. If not, put Year on the left side of the chart and Year1 on the right side.</p>
+
+<p>Click on Add new join clause under Year. A dropdown menu will appear.</p>
+
+<p>Select Country Name on the left side and Country on the right side.</p>
+
+<p>Click the X to close the dropdown menu.</p>
+
+<p><img src="/img/posts/tableau/img04.png" /></p>
+
+<p>Click Update now to examine the dataset. You will notice that Year and Year1 have a number sign above them. Change the data type to date for each of these columns.</p>
+
+<p>In the column, Year click on the # (not the arrow next to it) and select Date from the available options.</p>
+
+<p>After completing the first field, you will notice a red exclamation mark between CO2 Data Cleaned and Energy. This indicates that the columns you have joined are no longer of the same data type. One is formatted as date, and the other numeric.</p>
+
+<p>Click on the Energy box at the top of the screen to see the Energy table again. In the Year1 column, click on the # (not the arrow next to it) and select Date from the available options.</p>
+
+<p>The red exclamation mark will disappear. You might notice that all the years have been put into a month/day/year form with the default month and day as January 1st. This will not create any problems when creating a visualization, as you will filter the data by year.</p>
+
+<p><strong>Join additional datasets</strong></p>
+
+<p>Before adding any additional joins, the data type for Year(Gdptotal) needs to change.</p>
+
+<p>A pop-up window will appear for the join. It might already be populated with Year1 under Datasource and Year(Gdptotal) under gdptotal.</p>
+
+<p>Click on gdptotal under Connections.</p>
+
+<p>Under Sheets, drag the gdptotal sheet into the white space underneath the energy box.</p>
+
+<p>Scroll to the right until you find the column Year(Gdptotal). Click on # above it. A drop-down menu will appear.</p>
+
+<p>Select Date from the drop-down menu.</p>
+
+<p>Click on the Venn diagram between energy and gdptotal. Click on Add new join clause under year. A drop-down menu will appear.</p>
+
+<p>Under CO2 Data Cleaned click on Country Name.</p>
+
+<p><img src="/img/posts/tableau/img05.png" /></p>
+
+<p>Click on the empty field under gdptotal across from Country Name. A dropdown menu will appear.</p>
+
+<p>Set the right side of the join statement to Country1.</p>
+
+<p>Close the Join pop-up by clicking on its exit button.</p>
+
+<p>Now you are going to join totalpopulation, the last of the four datasets that you downloaded.</p>
+
+<p>Click on totalpopulation under Connections.</p>
+
+<p>Under Sheets, drag the totalpopulation sheet into the white space to the right of the energy and gdptotal boxes.</p>
+
+<p>A pop-up window will appear for the join. It should already be populated with Year under Datasource and Year(totalpopulation) under totalpopulation.</p>
+
+<p>Scroll to the right until you find the Year(totalpopulation) column. Click on # above it. A drop-down menu will appear.</p>
+
+<p>Select Date from the drop-down menu.</p>
+
+<p>Click on the Venn diagram to the left of totalpopulation. Click on Add new join clause under Year. A drop-down menu will appear.</p>
+
+<p>Under CO2 Data Cleaned click Country Name.</p>
+
+<p>Click on the empty field under totalpopulation across from Country Name. A dropdown menu will appear.</p>
+
+<p>Click Country (totalpopulation).</p>
+
+<p>Close the Join pop-up by clicking on its exit button.</p>
+
+<p>Click the Update button to view your data columns.</p>
+
+<p>Congratulations! You have successfully joined four different sources of data.</p>
+
+<p>You should take some time to study your dataset. The only years you should notice in your dataset are between 2000-2011. While your dataset CO2 went from 1960-2011, and your other datasets went from 2000-2015, the intersection (the years they have in common) only includes 2000-2011. This is just the time span that you need.</p>
+
+<p>If the dataset had gone beyond those dates, you would have filtered out the unneeded years in your visualization.</p>
+
+<p>Reviewing the dataset, you may have noticed that some of your measurement values need to be changed. The data type for the column Energy use is listed as string data. You can tell this because of the Abc icon above the name. The column currentGDP is also formatted as type string.</p>
+
+<p>Find the Abc icon above the Energy use column. Change it to Number (decimal).</p>
+
+<p>Find the Abc icon above the currentGDP column. Change it to Number (whole).</p>
+
+<p><strong>Create a visualization</strong></p>
+
+<p>At the bottom of your screen, you will notice a tab labeled Sheet 1.</p>
+
+<p>Click on the tab Sheet1.</p>
+
+<p>Drag Country Name under CO2 Data Cleaned into the Detail square.</p>
+
+<p>Drag CO2 Per Capita to Color.</p>
+
+<p>Click on Color, then Edit Colors.</p>
+
+<p>Click on the Palette dropdown and change it from Automatic to Red-Green diverging.</p>
+
+<p>Check the boxes for Stepped Color and Reversed. (Because green is generally viewed as positive for CO2 emissions, you want the colors to move towards red as emissions go up.)</p>
+
+<p>Click the Show Advanced dropdown.</p>
+
+<p>Check the Start and End boxes.</p>
+
+<p>You might have noticed that the legend on the right-hand side of the screen shows Sum(CO2 per capita). You need to change the start and end values in order to notice color contrasts showing red shades.</p>
+
+<p>The lowest CO2 Per Capita emission for any year is 0.0396 and the largest is 61.9898.</p>
+
+<p>Enter 0 into the Start field, and 62 into the End field. Click OK. Click the X button.</p>
+
+<p>Note: These values are the highest and lowest emissions between 2000-2011. Your screen should now look like this:</p>
+
+<p>Drag Year from under CO2 Data Cleaned into the Filters area.</p>
+
+<p>Click on Years, Next, All, OK.</p>
+
+<p>In the Filters box, right-click on YEAR(Year)</p>
+
+<p>Select Show Filter. The filter will appear on the right side of the screen.</p>
+
+<p>Click on the arrow to the right of YEAR(Year) on the far-right side of the screen.</p>
+
+<p>Select Single Value (dropdown). Now the areas are colored only for the values of each year. You can browse any of the years between 2000-2011 to view the emissions for that year.</p>
+
+<p><img src="/img/posts/tableau/img06.png" /></p>
+
+<p>Also added bar graph per region:</p>
+
+<p><img src="/img/posts/tableau/img07.png" /></p>
+
+<p>Congratulations! You’ve linked your data and made a comprehensive data visualization in Tableau.</p>
+
+:ET

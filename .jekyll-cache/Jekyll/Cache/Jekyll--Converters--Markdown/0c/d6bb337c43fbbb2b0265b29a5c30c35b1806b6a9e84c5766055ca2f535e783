@@ -1,0 +1,26 @@
+I"z
+<h1 id="tableau-software">Tableau Software#</h1>
+
+<p>Tableau Software is an American interactive data visualization software company focused on business intelligence. It was founded in 2003 in Mountain View, California, and is currently headquartered in Seattle, Washington.</p>
+
+<p><br /><br /></p>
+
+<h1 id="global-co2-emissions-2010-2011">Global CO2 emissions 2010-2011</h1>
+<p><br /></p>
+
+<p>In this excercise, I will show how to make visualizations out of data from multiple sources. This will enable you to visualize comparisons and combinations of data, which will allow sharing more complex projects.</p>
+
+<p>This viz will show the CO2 emissions per capita for each country from 2010-2011, comparing CO2 emissions between countries from year to year, but also provides information about each county’s population, GDP, and energy use.</p>
+
+<p>First click on the links to download the datasets:</p>
+
+<p><a href="https://d3c33hcgiwev3.cloudfront.net/L2hkvFNhSXeoZLxTYQl3nA_5566727b2d444172b56efc2ff36565ac_CO2.xlsx?Expires=1626393600&amp;Signature=AaxNLfL-gHLgqE0grftBjH549t9hwv7XjcMoe17pXtmrW5zzDLp-CCIMMLNdXjAHOwvQfi0Md7UQbNX-6vPDyCEXYVnjGELP6Qm5RVf~ckuY2lhitj93yPrct~sv2wpDGivIW849ghYdcC5rknlM3BkiejV2D1hd6kGmaAgD7ZM_&amp;Key-Pair-Id=APKAJLTNE6QMUY6HBC5A">CO2.xlsx</a>
+<a href="https://d3c33hcgiwev3.cloudfront.net/HvJxDD-oQbSycQw_qMG0mQ_94f08b5298d94325abdb9d843618b58e_Energy-data.xlsx?Expires=1626393600&amp;Signature=Lb5B1zMZA3VpcEwzQSEv-UhKcl4-gKR918arSFQTn8e9ZlMqHh34szebva6mo9C7u6BQ138Etz2WhcpSsO8R2QG72~ZDAx~ilcD~7zz9XbkHI8henY~rYjkYHWrSDa4AEq5n5yLghldl191Kj2d~8p5CXQ~1crvblyadpAAV1c8_&amp;Key-Pair-Id=APKAJLTNE6QMUY6HBC5A">Energy data.xlsx</a>
+<a href="https://d3c33hcgiwev3.cloudfront.net/AFPt1QKBRbKT7dUCgYWy9A_e5063a3d2680444681fa33afc140fca2_totalpopulation.xlsx?Expires=1626393600&amp;Signature=Db6PGZtuOl~6jO5SXGPdeMv3vf7VX5M2YDAiX0oYK10n3x~mkEj~P5wpRBDZxv-2kqzsAlxJ4V0fTt5gTO-s605Swcyhc4ZZYeCYxoupoobFL8Sq8JjPrT2IKjIyZQWExLz4a8unykBpob3yUs42U0j3v8icuiP7gGIIgnIcg6I_&amp;Key-Pair-Id=APKAJLTNE6QMUY6HBC5A">totalpopulation.xlsx</a>
+<a href="https://d3c33hcgiwev3.cloudfront.net/6lyds9u2TRqcnbPbth0aOQ_6869b3e9e1d04ba2bf9cd3d8312108af_gdptotal.xlsx?Expires=1626393600&amp;Signature=PsqrtO-u2NglGR5COn4OwIw6Rhw7aFAv7z9d9CV5WapCYWpTTEfsfbNkeDEmUgmRlm0-mrrP0kqIzW6EYCUXSGlduDYtKtASCr5melvY3BfE9pH4SJlUvKPEIxWUPF2hhYIarUp4KDuaN~iSoE6XsIO32qQABanEqop8-ocYYo4_&amp;Key-Pair-Id=APKAJLTNE6QMUY6HBC5A">gdptotal.xlsx</a></p>
+
+<p>From the Connect to Data window, go to the Files tab and open the CO2 dataset you downloaded earlier.</p>
+
+<p>Now, from the Data Source tab on the bottom of the interface, go to the Connections header at the top of the left-side column.</p>
+
+:ET
