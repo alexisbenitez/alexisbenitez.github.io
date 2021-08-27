@@ -1,5 +1,6 @@
 ---
 permalink: '/robots.txt'
 ---
-
+user-agent: *
+Allow: /
 Allow: {{ site.url }}
