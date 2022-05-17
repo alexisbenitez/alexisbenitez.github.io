@@ -2,10 +2,9 @@
 layout: default
 ---
 
-<img src="img\404.png" alt="Paris" class="center">
+<!-- <img src="img\404.png" alt="Paris" class="center"> -->
 
-<!-- 
-<!-- Page Header
+<!--Page Header -->
 {% if page.background %}
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
@@ -39,8 +38,11 @@ layout: default
         <ul>
             <li>Visual Studio Code.</li>
             <li>Jupyter Notebook.</li>
-            <li>MySQL Workbench & HeidiSQL.</li>
-            <li>Tableau Software.</li>
+            <li>BigQuery, MySQL Workbench, DBeaver, PyCharm, HeidiSQL.</li>
+            <li>Tableau Software 2021/2022.</li>
+            <li>Google Data Studio.</li>
+            <li>Google Tag Manager.</li>
+            <li>Google Data Studio.</li>
             <li>Excel & Google Sheets.</li>
             <li>RStudio.</li>
             <li>GitHub.</li>
@@ -88,11 +90,11 @@ layout: default
       <ul>
         <li><a href="https://github.com/alexisbenitez/alexisbenitez.github.io/raw/master/_files/CV_Alexis_Benitez_Data_Analyst.pdf" class="blue" target="_blank" download=" CV_AlexisBenitez_DataAnalyst.pdf">CV - Alexis Benitez</a></li>
       </ul>
-        <br><br> -->
+        <br><br>
 
 
         <!-- Home Post List -->
-        <!-- {% for post in site.posts limit : 5 %}
+         {% for post in site.posts limit : 5 %}
 
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -116,12 +118,12 @@ layout: default
 
         <hr>
 
-        {% endfor %} -->
+        {% endfor %}
 
         <!-- Pager -->
-        <!-- <div class="clearfix">
+        <div class="clearfix">
           <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">My Posts &rarr;</a>
-        </div> -->
+        </div>
 
       </div>
     </div>
