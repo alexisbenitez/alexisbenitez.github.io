@@ -2,7 +2,7 @@
 layout: post
 title: "Data scraping"
 subtitle: "A scraper to get all laptops on flipkart.com"
-date: 2020-08-20 23:45:13 -1300
+date: 1-08-20 23:45:13 -1300
 background: '/img/posts/web-scraping/python-scraping.png'
 ---
 
